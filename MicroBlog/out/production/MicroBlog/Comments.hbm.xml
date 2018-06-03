@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.lhz.model">
+
+    <class name="Comments" table="Comments">
+
+        <!-- 主键 ，映射-->
+        <id name="comments_id" column="id">
+            <generator class="native"/>
+        </id>
+
+        <!-- 非主键，映射 -->
+        <property name="empName" column="empName"></property>
+        <property name="workDate" column="workDate"></property>
+
+
+
+    </class>
+
+</hibernate-mapping>

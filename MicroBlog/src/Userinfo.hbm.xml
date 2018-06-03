@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.lhz.model">
+<!--
+    <class>标签：配置对象与表 之间关系
+        *name:默认情况，确定对象全限定类名
+        如果在
+        <hibernate-mapping>配置package，确定javabean所在的包，可以只简单类名
+            *table:数据库的表名
+            *catalog:使用的数据库名称，默认值：hibernate.cfg.xml配置url设置的数据库名称
+            url # jdbc:mysql://localhost:3306/minemysql
+            <id>标签配置主键，要求每一个表都应该存在主键
+            * name :确定javabean那个属性作为主键
+            <property>标签 配置javabean的普通属性
+            * name: 确定属性名称
+            * type: 确定属性类型
+            java类型：type="java.lang.String"
+            hibernate类型：type="string"
+            timestamp:时间戳，数据更改，当前字段内容将自动使用系统时间
+            time:时间
+            date:日期
+            binary:二进制，大数据类型
+            数据库类型： 使用子标签
+            <column>
+            name:列名
+            sql-type:数据库类型。例如：varchar(50)
+            * column: 数据库的列名：默认值与name的取值相同
+            * length: 确定列的大小
+            * unique:唯一（添加唯一约束）
+            * not-null:不为空
+-->
+    <class name="Userinfo" table="Userinfo">
+
+        <!-- 主键 ，映射-->
+        <id name="userinfo_id" column="userinfo_id"> </id>
+
+        <!-- 非主键，映射 -->
+        <property name="userinfo_name" column="userinfo_name"/>
+        <property name="userinfo_gender" column="userinfo_gender"/>
+        <property name="userinfo_address" column="userinfo_address"/>
+        <property name="userinfo_birth" column="userinfo_birth"/>
+        <property name="userinfo_qq" column="userinfo_qq" />
+        <property name="userinfo_prof" column="userinfo_prof"/>
+        <property name="userinfo_flag" column="userinfo_flag"/>
+        <property name="user_id" column="user_id" type="integer"/>
+    </class>
+</hibernate-mapping>
