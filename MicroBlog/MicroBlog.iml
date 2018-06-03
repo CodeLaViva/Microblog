@@ -24,8 +24,8 @@
     <facet type="hibernate" name="Hibernate">
       <configuration>
         <datasource-map>
-          <unit-entry name="hibernate.cfg.xml" />
-          <unit-entry name="sessionFactory" />
+          <unit-entry name="hibernate.cfg.xml" value="ff75f3a7-418a-4681-a455-9b65ec0716c2" />
+          <unit-entry name="sessionFactory" value="ffa7ef06-7c2e-4753-8fe2-37caabf2ae60" />
         </datasource-map>
         <naming-strategy-map />
         <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/hibernate.cfg.xml" />
@@ -62,5 +62,7 @@
     <orderEntry type="library" name="commons-httpclient-3.1" level="project" />
     <orderEntry type="library" name="commons-lang-2.6" level="project" />
     <orderEntry type="library" name="commons-collections-3.2.2" level="project" />
+    <orderEntry type="library" name="jackson-databind-2.8.4" level="project" />
+    <orderEntry type="library" name="jackson-annotations-2.8.4" level="project" />
   </component>
 </module>

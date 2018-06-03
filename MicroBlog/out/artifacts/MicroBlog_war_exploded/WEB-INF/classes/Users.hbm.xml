@@ -35,14 +35,14 @@
     <class name="Users" table="Users">
 
         <!-- 主键 ，映射-->
-        <id name="user_id" column="user_id" type="string"> </id>
+        <id name="user_id" column="user_id" > </id>
 
         <!-- 非主键，映射 -->
-        <property name="user_phone" column="user_phone" type="string" length="11"/>
-        <property name="user_email" column="user_email" type="string"/>
-        <property name="user_password" column="user_password" type="string" length="16"/>
-        <property name="user_nikename" column="user_nikename" type="string"/>
-        <property name="user_time" column="user_time" type="timestamp"/>
-        <property name="user_status" column="user_status" type="integer" length="2"/>
+        <property name="user_phone" column="user_phone"/>
+        <property name="user_email" column="user_email"/>
+        <property name="user_password" column="user_password" />
+        <property name="user_nikename" column="user_nikename"/>
+        <property name="user_time" column="user_time" />
+        <property name="user_status" column="user_status" />
     </class>
 </hibernate-mapping>

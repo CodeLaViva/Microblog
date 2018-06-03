@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="My">
+    <serverData>
+      <paths name="My">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/root/apache-tomcat-8.5.31/webapps" local="$PROJECT_DIR$" web="/MicroBlog" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

@@ -2,7 +2,6 @@
   <artifact type="exploded-war" name="MicroBlog:war exploded">
     <output-path>$PROJECT_DIR$/out/artifacts/MicroBlog_war_exploded</output-path>
     <root id="root">
-      <element id="javaee-facet-resources" facet="MicroBlog/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="MicroBlog" />
@@ -14,8 +13,15 @@
           <element id="library" level="project" name="Spring MVC-4.3.16.RELEASE" />
           <element id="library" level="application" name="postgresql-42.2.2.jre7" />
           <element id="library" level="module" name="JUnit4" module-name="MicroBlog" />
+          <element id="library" level="project" name="ezmorph-1.0.6" />
+          <element id="library" level="project" name="commons-httpclient-3.1" />
+          <element id="library" level="project" name="commons-lang-2.6" />
+          <element id="library" level="project" name="commons-collections-3.2.2" />
+          <element id="library" level="project" name="jackson-databind-2.8.4" />
+          <element id="library" level="project" name="jackson-annotations-2.8.4" />
         </element>
       </element>
+      <element id="javaee-facet-resources" facet="MicroBlog/web/Web" />
     </root>
   </artifact>
 </component>

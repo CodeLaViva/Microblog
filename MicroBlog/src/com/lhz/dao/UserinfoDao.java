@@ -44,7 +44,7 @@ public class UserinfoDao {
         session.getTransaction().commit();   //事务提交
 
         if (list.size() != 0) {
-            int userinfo_id = (int) list.get(1);
+            int userinfo_id = (int) list.get(0);
             return userinfo_id;
         }
 

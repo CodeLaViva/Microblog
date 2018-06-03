@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.lhz.model">
+
+    <class name="Messages" table="Messages">
+
+        <!-- 主键 ，映射-->
+        <id name="messages_id" column="messages_id">
+            <generator class="native" />
+        </id>
+        <!-- 非主键，映射 -->
+        <!-- 非主键，映射 -->
+        <property name="messages_type" column="messages_type"/>
+        <property name="messages_info" column="messages_info"/>
+        <property name="messages_time" column="messages_time"/>
+        <property name="messages_commentnum" column="messages_commentnum"/>
+        <property name="messages_agreement" column="messages_agreement"/>
+        <property name="messages_collection" column="messages_collection"/>
+        <property name="messages_label" column="messages_label"/>
+        <property name="user_id" column="user_id"/>
+
+
+
+    </class>
+
+</hibernate-mapping>

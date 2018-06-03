@@ -42,38 +42,24 @@
     </script>
 
     <script>
-        var url = "localhost:8080/json.do";
-        var jsonStr = {"username": "lhz", "user_password": "123"};//object类型
-        var jsonArrayFinal = JSON.stringify(jsonStr);//string类型
+        var url = "http://localhost:8080/ajax.do";
+        var saveDataAry = [];
+        var data1 = {"username": "lhz", "user_password": "123"};
+        var data2 = {"username": "lhz2", "user_password": "1234"};
+        saveDataAry.push(data1);
+        saveDataAry.push(data2);
 
         jQuery.ajax({
-
-            type: "post",//put delete get post
+            type: "POST",
             url: url,
-            //dataType : 'json',
-            /*
-            预期服务器返回的数据类型 xml html script  json jsonp  text ;
-            如果不指定，则服务器根据返回数据类型自行判断
-            */
-
+            dataType: "json",
             async: true,//默认异步
-            data: {mydata: jsonArrayFinal},
-            //或{'mydata':jsonArrayFinal}
-
-            /*
-            要么使用 \ 对json进行手动转译，要么使用JSON.stringify(jsonStr) 将其转换为字符串类型；
-            如果不进行转译，使用【2】中的后台接收方法，那么不会报异常，但是获取不到数据。
-            data : {mydata:jsonStr},//报空指针异常，传不过去
-            */
-
-            contentType: "application/x-www-form-urlencoded",//默认值
-            success: function (data, textStatus) {
+            contentType: "application/json;charset=utf-8",
+            data: JSON.stringify(saveDataAry),
+            success: function (data) {
                 alert(data);
-                alert("操作成功");
-            },
-            error: function (xhr, status, errMsg) {
-                alert("操作失败!");
             }
+
         });
     </script>
 

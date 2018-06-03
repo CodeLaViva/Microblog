@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="MicroBlog:war exploded" />
+      <artifact name="MicroBlog" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
@@ -16,42 +16,39 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Hibernate_Test.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/lhz/util/Hibernate_Test.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Messages.hbm.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Messages.hbm.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="67" column="27" lean-forward="true" selection-start-line="63" selection-start-column="12" selection-end-line="67" selection-end-column="27" />
+            <state relative-caret-position="114">
+              <caret line="11" column="40" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MicroBlogController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MicroBlogController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/lhz/controller/MicroBlogController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="599">
-              <caret line="111" column="49" selection-start-line="111" selection-start-column="49" selection-end-line="111" selection-end-column="49" />
+            <state relative-caret-position="138">
+              <caret line="149" column="8" selection-start-line="149" selection-start-column="8" selection-end-line="152" selection-end-column="55" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserinfoDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/lhz/dao/UserinfoDao.java">
+      <file leaf-file-name="applicationContext.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/applicationContext.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="713">
-              <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="323">
+              <caret line="17" column="47" lean-forward="true" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Messages.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/lhz/model/Messages.java">
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/out/artifacts/MicroBlog_war_exploded/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="22" lean-forward="true" selection-start-column="22" selection-end-column="22" />
+            <state relative-caret-position="323">
+              <caret line="52" column="25" lean-forward="true" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -59,8 +56,17 @@
       <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="48" selection-end-column="21" />
+            <state relative-caret-position="447">
+              <caret line="60" column="13" lean-forward="true" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/test.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -80,9 +86,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="spring-beans.schema" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -97,23 +103,29 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" />
         <option value="$PROJECT_DIR$/src/com/lhz/util/HibernateUtil.java" />
         <option value="$PROJECT_DIR$/web/my_jquery.js" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
-        <option value="$PROJECT_DIR$/web/login.html" />
         <option value="$PROJECT_DIR$/src/com/lhz/model/Message.java" />
         <option value="$PROJECT_DIR$/src/com/lhz/model/Messages.java" />
         <option value="$PROJECT_DIR$/src/com/lhz/model/Relation.java" />
         <option value="$PROJECT_DIR$/src/com/lhz/model/Userinfo.java" />
         <option value="$PROJECT_DIR$/src/com/lhz/service/LoginService.java" />
-        <option value="$PROJECT_DIR$/src/com/lhz/dao/MessagesDao.java" />
-        <option value="$PROJECT_DIR$/src/Userinfo.hbm.xml" />
         <option value="$PROJECT_DIR$/src/Users.hbm.xml" />
-        <option value="$PROJECT_DIR$/src/hibernate.cfg.xml" />
+        <option value="$PROJECT_DIR$/src/com/lhz/model/Comments.java" />
         <option value="$PROJECT_DIR$/src/com/lhz/dao/LoginDao.java" />
+        <option value="$PROJECT_DIR$/src/com/lhz/dao/CommentsDao.java" />
         <option value="$PROJECT_DIR$/src/com/lhz/dao/UserinfoDao.java" />
+        <option value="$PROJECT_DIR$/src/hibernate.cfg.xml" />
+        <option value="$PROJECT_DIR$/src/Messages.hbm.xml" />
+        <option value="$PROJECT_DIR$/src/Userinfo.hbm.xml" />
+        <option value="$PROJECT_DIR$/src/Comments.hbm.xml" />
+        <option value="$PROJECT_DIR$/web/login.html" />
+        <option value="$PROJECT_DIR$/web/test.html" />
+        <option value="$PROJECT_DIR$/src/com/lhz/dao/MessagesDao.java" />
+        <option value="$PROJECT_DIR$/out/artifacts/MicroBlog_war_exploded/login.html" />
         <option value="$PROJECT_DIR$/src/com/lhz/controller/MicroBlogController.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" />
       </list>
     </option>
   </component>
@@ -145,7 +157,6 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -163,6 +174,13 @@
               <item name="MicroBlog" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="lhz" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MicroBlog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MicroBlog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="lhz" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MicroBlog" type="b2602c69:ProjectViewProjectNode" />
@@ -214,15 +232,17 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15264586" />
     <property name="project.structure.side.proportion" value="0.254589" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -230,9 +250,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\SVN\Microblog\MicroBlog\lib" />
       <recent name="D:\SVN\Microblog\MicroBlog\src" />
       <recent name="D:\SVN\Microblog\MicroBlog\web" />
-      <recent name="D:\SVN\Microblog\MicroBlog\lib" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -261,6 +281,52 @@
       <option name="PACKAGE_NAME" value="com.lhz.util" />
       <option name="MAIN_CLASS_NAME" value="com.lhz.util.Hibernate_Test" />
       <option name="METHOD_NAME" value="update_test" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="LoginDao.get_user_id" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MicroBlog" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lhz.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.lhz.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.lhz.dao.LoginDao" />
+      <option name="METHOD_NAME" value="get_user_id" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="MessagesDao.put_messages" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MicroBlog" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lhz.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.lhz.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.lhz.dao.MessagesDao" />
+      <option name="METHOD_NAME" value="put_messages" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -331,6 +397,147 @@
       <option name="PROPERTIES_FILE" />
       <properties />
       <listeners />
+    </configuration>
+    <configuration name="154.8.143.45" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote" APPLICATION_SERVER_NAME="Tomcat 8.0.20" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="HOST" value="154.8.143.45" />
+      <option name="LOCAL" value="false" />
+      <option name="OPEN_IN_BROWSER" value="false" />
+      <option name="UPDATING_POLICY" value="hot-swap-classes" />
+      <deployment>
+        <artifact name="MicroBlog:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <data>
+          <option name="targets">
+            <list>
+              <WatchedTargetModelImpl>
+                <option name="name" value="CONTEXT_XML" />
+                <option name="transportStagingTarget">
+                  <TransportTarget>
+                    <option name="id" value="e750aabb-0011-4829-98c0-9d25546bdef0" />
+                    <id>e750aabb-0011-4829-98c0-9d25546bdef0</id>
+                  </TransportTarget>
+                </option>
+                <option name="watchedLocalPath" value="" />
+                <watched-path />
+                <name>CONTEXT_XML</name>
+                <transport-target>
+                  <TransportTarget>
+                    <option name="id" value="e750aabb-0011-4829-98c0-9d25546bdef0" />
+                    <id>e750aabb-0011-4829-98c0-9d25546bdef0</id>
+                  </TransportTarget>
+                </transport-target>
+              </WatchedTargetModelImpl>
+              <StagingTargetModelImpl>
+                <option name="name" value="STAGING" />
+                <option name="stagingRemotePath" value="/root/apache-tomcat-8.5.31/webapps" />
+                <option name="transportStagingTarget">
+                  <TransportTarget>
+                    <option name="id" value="70bdaf19-688a-49bd-aa8b-fbcfe7ab22f7" />
+                    <id>70bdaf19-688a-49bd-aa8b-fbcfe7ab22f7</id>
+                  </TransportTarget>
+                </option>
+                <staging-path>/root/apache-tomcat-8.5.31/webapps</staging-path>
+                <name>STAGING</name>
+                <transport-target>
+                  <TransportTarget>
+                    <option name="id" value="70bdaf19-688a-49bd-aa8b-fbcfe7ab22f7" />
+                    <id>70bdaf19-688a-49bd-aa8b-fbcfe7ab22f7</id>
+                  </TransportTarget>
+                </transport-target>
+              </StagingTargetModelImpl>
+            </list>
+          </option>
+          <option name="transportHostId" value="ae31aca4-7e78-4db9-949a-c0ee91624004" />
+          <host-id>ae31aca4-7e78-4db9-949a-c0ee91624004</host-id>
+        </data>
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="60266" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="MicroBlog:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="Remote_Test" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote" APPLICATION_SERVER_NAME="Tomcat 8.0.20" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="HOST" value="154.8.143.45" />
+      <option name="LOCAL" value="false" />
+      <option name="OPEN_IN_BROWSER" value="false" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://154.8.143.45:8080/" />
+      <option name="UPDATING_POLICY" value="hot-swap-classes" />
+      <deployment>
+        <artifact name="MicroBlog:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <data>
+          <option name="targets">
+            <list>
+              <WatchedTargetModelImpl>
+                <option name="name" value="CONTEXT_XML" />
+                <option name="transportStagingTarget">
+                  <TransportTarget>
+                    <option name="id" value="7a6ad2fb-8067-439c-a83f-498d04ab34d7" />
+                    <id>7a6ad2fb-8067-439c-a83f-498d04ab34d7</id>
+                  </TransportTarget>
+                </option>
+                <option name="watchedLocalPath" value="" />
+                <watched-path />
+                <name>CONTEXT_XML</name>
+                <transport-target>
+                  <TransportTarget>
+                    <option name="id" value="7a6ad2fb-8067-439c-a83f-498d04ab34d7" />
+                    <id>7a6ad2fb-8067-439c-a83f-498d04ab34d7</id>
+                  </TransportTarget>
+                </transport-target>
+              </WatchedTargetModelImpl>
+              <StagingTargetModelImpl>
+                <option name="name" value="STAGING" />
+                <option name="stagingRemotePath" value="" />
+                <option name="transportStagingTarget">
+                  <TransportTarget>
+                    <option name="id" value="0b5bd968-e5aa-47c7-a6d5-041edd8cb20e" />
+                    <id>0b5bd968-e5aa-47c7-a6d5-041edd8cb20e</id>
+                  </TransportTarget>
+                </option>
+                <staging-path />
+                <name>STAGING</name>
+                <transport-target>
+                  <TransportTarget>
+                    <option name="id" value="0b5bd968-e5aa-47c7-a6d5-041edd8cb20e" />
+                    <id>0b5bd968-e5aa-47c7-a6d5-041edd8cb20e</id>
+                  </TransportTarget>
+                </transport-target>
+              </StagingTargetModelImpl>
+            </list>
+          </option>
+          <option name="transportHostId" value="" />
+          <host-id />
+        </data>
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="51357" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="MicroBlog:war exploded" />
+        </option>
+      </method>
     </configuration>
     <configuration name="Tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.0.20" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER" value="false" />
@@ -442,11 +649,17 @@
     </configuration>
     <list>
       <item itemvalue="Tomcat Server.Tomcat" />
+      <item itemvalue="Tomcat Server.154.8.143.45" />
+      <item itemvalue="Tomcat Server.Remote_Test" />
       <item itemvalue="JUnit.Hibernate_Test.update_test" />
       <item itemvalue="JUnit.MicroBlogController.test" />
+      <item itemvalue="JUnit.LoginDao.get_user_id" />
+      <item itemvalue="JUnit.MessagesDao.put_messages" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MessagesDao.put_messages" />
+        <item itemvalue="JUnit.LoginDao.get_user_id" />
         <item itemvalue="JUnit.MicroBlogController.test" />
         <item itemvalue="JUnit.Hibernate_Test.update_test" />
       </list>
@@ -462,44 +675,55 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1527929488326</updated>
-      <workItem from="1527929491498" duration="18619000" />
+      <workItem from="1527929491498" duration="28403000" />
+      <workItem from="1528011030023" duration="244000" />
+      <workItem from="1528011281203" duration="20884000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Hibernate_Test_update_test - 2018.06.02 at 16h 59m 08s.xml">
-      <configuration name="Hibernate_Test.update_test" configurationId="JUnit" />
+    <history-entry file="LoginDao_get_user_id - 2018.06.03 at 16h 30m 32s.xml">
+      <configuration name="LoginDao.get_user_id" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MicroBlogController_test - 2018.06.02 at 20h 24m 18s.xml">
-      <configuration name="MicroBlogController.test" configurationId="JUnit" />
+    <history-entry file="LoginDao_get_user_id - 2018.06.03 at 16h 30m 47s.xml">
+      <configuration name="LoginDao.get_user_id" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MicroBlogController_test - 2018.06.02 at 20h 25m 57s.xml">
-      <configuration name="MicroBlogController.test" configurationId="JUnit" />
+    <history-entry file="MessagesDao_put_messages - 2018.06.03 at 16h 35m 42s.xml">
+      <configuration name="MessagesDao.put_messages" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MicroBlogController_test - 2018.06.02 at 20h 26m 58s.xml">
-      <configuration name="MicroBlogController.test" configurationId="JUnit" />
+    <history-entry file="MessagesDao_put_messages - 2018.06.03 at 16h 36m 39s.xml">
+      <configuration name="MessagesDao.put_messages" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MicroBlogController_test - 2018.06.02 at 20h 27m 15s.xml">
-      <configuration name="MicroBlogController.test" configurationId="JUnit" />
+    <history-entry file="MessagesDao_put_messages - 2018.06.03 at 16h 37m 09s.xml">
+      <configuration name="MessagesDao.put_messages" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MicroBlogController_test - 2018.06.02 at 20h 27m 36s.xml">
-      <configuration name="MicroBlogController.test" configurationId="JUnit" />
+    <history-entry file="MessagesDao_put_messages - 2018.06.03 at 16h 38m 44s.xml">
+      <configuration name="MessagesDao.put_messages" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MicroBlogController_test - 2018.06.02 at 21h 07m 20s.xml">
-      <configuration name="MicroBlogController.test" configurationId="JUnit" />
+    <history-entry file="MessagesDao_put_messages - 2018.06.03 at 16h 39m 10s.xml">
+      <configuration name="MessagesDao.put_messages" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MicroBlogController_test - 2018.06.02 at 21h 07m 40s.xml">
-      <configuration name="MicroBlogController.test" configurationId="JUnit" />
+    <history-entry file="MessagesDao_put_messages - 2018.06.03 at 16h 39m 54s.xml">
+      <configuration name="MessagesDao.put_messages" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MicroBlogController_test - 2018.06.02 at 21h 07m 50s.xml">
-      <configuration name="MicroBlogController.test" configurationId="JUnit" />
+    <history-entry file="MessagesDao_put_messages - 2018.06.03 at 16h 41m 29s.xml">
+      <configuration name="MessagesDao.put_messages" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MicroBlogController_test - 2018.06.02 at 21h 10m 07s.xml">
-      <configuration name="MicroBlogController.test" configurationId="JUnit" />
+    <history-entry file="MessagesDao_put_messages - 2018.06.03 at 16h 42m 49s.xml">
+      <configuration name="MessagesDao.put_messages" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18619000" />
+    <option name="totallyTimeSpent" value="49531000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -517,27 +741,27 @@
       <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
       <window_info id="UI Designer" order="3" />
       <window_info anchor="bottom" id="Debug" order="11" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="14" />
+      <window_info anchor="bottom" id="TODO" order="14" weight="0.32976446" />
       <window_info anchor="bottom" id="Messages" order="3" weight="0.32655245" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="bottom" id="Version Control" order="6" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="9" weight="0.5589189" />
+      <window_info anchor="bottom" id="Run" order="9" visible="true" weight="0.35117772" />
       <window_info anchor="bottom" id="Spring" order="1" />
       <window_info anchor="bottom" id="Terminal" order="2" />
       <window_info id="Persistence" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.12953092" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.13166311" />
       <window_info id="Web" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.32976446" />
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="7" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="7" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -546,25 +770,40 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/lhz/dao/LoginDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/com/lhz/util/Hibernate_Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state relative-caret-position="1159">
+          <caret line="67" column="27" selection-start-line="63" selection-start-column="12" selection-end-line="67" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lhz/service/LoginServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/com/lhz/dao/CommentsDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="10" selection-start-line="10" selection-end-line="21" selection-end-column="5" />
+        <state relative-caret-position="437">
+          <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/applicationContext.xml">
+    <entry file="file://$PROJECT_DIR$/src/Comments.hbm.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="37" column="24" lean-forward="true" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+        <state relative-caret-position="190">
+          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="893">
+          <caret line="47" selection-start-line="47" selection-end-line="48" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -575,8 +814,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/jquery-3.1.1.js">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/com/lhz/controller/MicroBlogController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3971">
+          <caret line="227" column="5" selection-start-line="227" selection-start-column="5" selection-end-line="227" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lhz/util/Hibernate_Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1159">
+          <caret line="67" column="27" selection-start-line="63" selection-start-column="12" selection-end-line="67" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lhz/dao/CommentsDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Comments.hbm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="893">
+          <caret line="47" selection-start-line="47" selection-end-line="48" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lhz/controller/MicroBlogController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3344">
+          <caret line="194" lean-forward="true" selection-start-line="194" selection-end-line="194" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lhz/dao/LoginDaoImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/lhz/service/LoginServiceImpl.java" />
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/my_jquery.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -589,13 +886,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="48" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -651,13 +941,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lhz/model/Comments.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="9" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/lhz/service/LoginService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
@@ -669,20 +952,6 @@
             <element signature="e#396#397#0" expanded="true" />
             <element signature="e#426#427#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lhz/util/Hibernate_Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="67" column="27" lean-forward="true" selection-start-line="63" selection-start-column="12" selection-end-line="67" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lhz/model/Messages.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="22" lean-forward="true" selection-start-column="22" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -731,16 +1000,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lhz/dao/MessagesDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="26" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/lhz/model/Users.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -755,24 +1014,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hibernate.cfg.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/lhz/model/Comments.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Userinfo.hbm.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="34" column="44" lean-forward="true" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
+        <state relative-caret-position="513">
+          <caret line="45" column="5" lean-forward="true" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/lhz/dao/LoginDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="45" column="31" lean-forward="true" selection-start-line="45" selection-start-column="31" selection-end-line="46" selection-end-column="32" />
+        <state relative-caret-position="229">
+          <caret line="54" column="27" lean-forward="true" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lhz/dao/CommentsDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="46" column="31" lean-forward="true" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -781,18 +1043,104 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/lhz/dao/UserinfoDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="713">
-          <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+        <state relative-caret-position="38">
+          <caret line="30" column="4" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="51" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Userinfo.hbm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Comments.hbm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Messages.hbm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="11" column="40" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/artifacts/MicroBlog_war_exploded/WEB-INF/classes/com/lhz/controller/MicroBlogController.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1311">
+          <folding>
+            <element signature="e#0#9355#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="41" column="39" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lhz/model/Messages.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="27" lean-forward="true" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lhz/dao/MessagesDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="44" column="51" lean-forward="true" selection-start-line="44" selection-start-column="51" selection-end-line="44" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lhz/util/Hibernate_Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="57" column="13" lean-forward="true" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="60" column="13" lean-forward="true" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/artifacts/MicroBlog_war_exploded/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="52" column="25" lean-forward="true" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/lhz/controller/MicroBlogController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="599">
-          <caret line="111" column="49" selection-start-line="111" selection-start-column="49" selection-end-line="111" selection-end-column="49" />
+        <state relative-caret-position="138">
+          <caret line="149" column="8" selection-start-line="149" selection-start-column="8" selection-end-line="152" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="47" lean-forward="true" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -802,11 +1150,11 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>MicroBlog:war exploded</last-edited>
+          <last-edited>MicroBlog</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.254589" />
                 <option value="0.5" />
               </list>
             </option>
@@ -819,7 +1167,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.254589" />
               </list>
             </option>
           </splitter-proportions>
@@ -863,11 +1211,11 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Hibernate 5.2.16-5.2.16</last-edited>
+          <last-edited>ezmorph-1.0.6</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.254589" />
               </list>
             </option>
           </splitter-proportions>

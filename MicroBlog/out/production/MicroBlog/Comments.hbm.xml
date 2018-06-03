@@ -8,14 +8,16 @@
     <class name="Comments" table="Comments">
 
         <!-- 主键 ，映射-->
-        <id name="comments_id" column="id">
+        <id name="comments_id" column="comments_id">
             <generator class="native"/>
         </id>
 
         <!-- 非主键，映射 -->
-        <property name="empName" column="empName"></property>
-        <property name="workDate" column="workDate"></property>
-
+        <!-- 非主键，映射 -->
+        <property name="comments_info" column="comments_info"/>
+        <property name="comments_time" column="comments_time"/>
+        <property name="messages_id" column="messages_id"/>
+        <property name="user_id" column="user_id"/>
 
 
     </class>

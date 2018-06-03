@@ -1,13 +1,13 @@
 package com.lhz.model;
-import java.sql.Date;
+import java.sql.Timestamp;
 
 public class Comments {
 
     private int comments_id;
     private String comments_info;
-    private Date comments_time;
+    private Timestamp comments_time;
     private int messages_id;
-    private int user_id;
+    private String user_id;
 
     public int getComments_id() {
         return comments_id;
@@ -25,11 +25,11 @@ public class Comments {
         this.comments_info = comments_info;
     }
 
-    public Date getComments_time() {
+    public Timestamp getComments_time() {
         return comments_time;
     }
 
-    public void setComments_time(Date comments_time) {
+    public void setComments_time(Timestamp comments_time) {
         this.comments_time = comments_time;
     }
 
@@ -41,11 +41,11 @@ public class Comments {
         this.messages_id = messages_id;
     }
 
-    public int getUser_id() {
+    public String getUser_id() {
         return user_id;
     }
 
-    public void setUser_id(int user_id) {
+    public void setUser_id(String user_id) {
         this.user_id = user_id;
     }
 }

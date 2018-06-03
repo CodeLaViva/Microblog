@@ -1,22 +1,24 @@
 package com.lhz.controller;
 
+import com.lhz.dao.CommentsDao;
 import com.lhz.dao.MessagesDao;
 import com.lhz.dao.UserinfoDao;
+import com.lhz.model.Comments;
 import com.lhz.model.Messages;
 import com.lhz.model.Userinfo;
+import com.lhz.model.Users;
 import com.lhz.service.LoginService;
-import net.sf.json.JSONObject;
-import org.junit.Test;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import java.sql.Date;
 import java.sql.Timestamp;
+import java.util.Map;
 
 @Controller
 // Session范围 将user存入到session
@@ -25,9 +27,9 @@ public class MicroBlogController {
     LoginService loginService = new LoginService();
 
     //页面和方法参数一一对应
-    @RequestMapping(value = "login.do")
+    @RequestMapping(value = "login2.do")
     //ModelMap参数携带者
-    public String login(String username, String user_password, ModelMap map) {
+    public String login2(String username, String user_password, ModelMap map) {
         //System.out.println("vote_password = " + vote_password);
         //System.out.println("vote_username = " + vote_username);
         if (loginService.login(username, user_password)) {
@@ -39,60 +41,59 @@ public class MicroBlogController {
         return "login";
     }
 
+    @RequestMapping(value = "login.do")
+    @ResponseBody
+    public Users login(@RequestBody Map map) {
+        //userService.batchSave(users);
+        System.out.println(map.get("username"));
+        System.out.println(map.get("user_password"));
+
+        Users users = new Users();
+        users.setUser_id((String) map.get("username"));
+        users.setUser_password((String) map.get("user_password"));
+        return users;
+        //System.out.println(users);
+    }
+
+
     @RequestMapping(value = "json.do")
     @ResponseBody
-    public String login(HttpServletRequest request, ModelMap map) {
-        //String json_test = "{\"username\":\"lhz\",\"user_password\":\"123\"}";
-        String jsonData_login = request.getParameter("login");  //数据必须为'[..]'格式
-        //System.out.println(jsonData_login);
-        String username = null, user_password = null;
+    public String login(@RequestBody Map map, ModelMap modelMap) {
 
-        if (!jsonData_login.equals("")) {
-            JSONObject jsonObj = JSONObject.fromObject(jsonData_login);
-            username = (String) jsonObj.get("username");
-            user_password = (String) jsonObj.get("user_password");
-        }
+        String username = (String) map.get("username"),
+                user_password = (String) map.get("user_password");
+        Users users = new Users();
+        users.setUser_id(username);
+        users.setUser_password(user_password);
 
         if (loginService.login(username, user_password)) {
-            map.put("msg", "登录成功……");
+            modelMap.put("msg", "登录成功……");
             String user_id = loginService.get_user_id(username);
             if (!user_id.equals("false")) {
-                map.put("user", user_id);
+                modelMap.put("user", user_id);
             }
             return "true";
         }
 
-        map.put("msg", "登录失败……");
+        modelMap.put("msg", "登录失败……");
         return "false";
     }
 
     @RequestMapping(value = "userinfo.do")
     @ResponseBody
-    public Userinfo userinfo(HttpServletRequest request, ModelMap map){
-        String jsonData_put_messages = request.getParameter("userinfo");  //数据必须为'{..}'格式
-        //System.out.println(jsonData_put_messages);
-        String userinfo_name = null,
-                userinfo_gender = null,
-                userinfo_address = null,
-                userinfo_qq = null,
-                userinfo_prof = null,
-                userinfo_flag = null,
-                user_id;
-        Date userinfo_birth = null;
+    public Userinfo userinfo(@RequestBody Map map, ModelMap modelMap, HttpServletRequest request) {
+        String userinfo_name = (String) map.get("userinfo_name"),
+                userinfo_gender = (String) map.get("userinfo_gender"),
+                userinfo_address = (String) map.get("userinfo_address"),
+                userinfo_qq = (String) map.get("userinfo_qq"),
+                userinfo_prof = (String) map.get("userinfo_prof"),
+                userinfo_flag = (String) map.get("userinfo_flag"),
+                user_id = (String) map.get("user_id");
 
-        if (!jsonData_put_messages.equals("")) {
-            JSONObject jsonObj = JSONObject.fromObject(jsonData_put_messages);
-            userinfo_name = (String) jsonObj.get("userinfo_name");
-            userinfo_gender = (String) jsonObj.get("userinfo_gender");
-            userinfo_address = (String) jsonObj.get("userinfo_address");
-            userinfo_birth = (Date) jsonObj.get("userinfo_birth");
-            userinfo_qq = (String) jsonObj.get("userinfo_qq");
-            userinfo_prof = (String) jsonObj.get("userinfo_prof");
-            userinfo_flag = (String) jsonObj.get("userinfo_flag");
-        }
+        Date userinfo_birth = Date.valueOf((String) map.get("userinfo_birth"));
 
-        HttpSession httpSession = request.getSession();
-        user_id = (String) httpSession.getAttribute("username");
+        //HttpSession httpSession = request.getSession();
+        //user_id = (String) httpSession.getAttribute("username");
 
         Userinfo userinfo = new Userinfo();
         userinfo.setUserinfo_name(userinfo_name);
@@ -108,7 +109,7 @@ public class MicroBlogController {
         userinfoDao.userinfo(userinfo);
 
         int userinfo_id = userinfoDao.get_userinfo_id(user_id);
-        if(userinfo_id != 0){
+        if (userinfo_id != 0) {
             userinfo.setUserinfo_id(userinfo_id);
         }
 
@@ -117,30 +118,15 @@ public class MicroBlogController {
 
     @RequestMapping(value = "put_messages.do")
     @ResponseBody
-    public Messages put_messages(HttpServletRequest request, ModelMap map) {
+    public Messages put_messages(@RequestBody Map map, ModelMap modelMap, HttpServletRequest request) {
 
-        String jsonData_put_messages = request.getParameter("put_messages");  //数据必须为'{..}'格式
-        //System.out.println(jsonData_put_messages);
-        String messages_type = null, messages_info = null, messages_label = null, user_id;
-        Timestamp messages_time = null;
-
-        if (!jsonData_put_messages.equals("")) {
-            JSONObject jsonObj = JSONObject.fromObject(jsonData_put_messages);
-            messages_type = (String) jsonObj.get("messages_type");
-            messages_info = (String) jsonObj.get("messages_info");
-            messages_label = (String) jsonObj.get("messages_label");
-        }
-
-        HttpSession httpSession = request.getSession();
-        user_id = (String) httpSession.getAttribute("username");
+        String messages_type = (String) map.get("messages_type"),
+                messages_info = (String) map.get("messages_info"),
+                messages_label = (String) map.get("messages_label"),
+                user_id = (String) map.get("user_id");
+        Timestamp messages_time;
 
         messages_time = new Timestamp(new java.util.Date().getTime());
-
-        /*System.out.println("messages_type: " + messages_type);
-        System.out.println("messages_info: " +messages_info);
-        System.out.println("messages_label: " +messages_label);
-        System.out.println("messages_time: " +messages_time);
-        System.out.println("username: " + user_id);*/
 
         Messages messages = new Messages();
         messages.setMessages_type(messages_type);
@@ -152,34 +138,38 @@ public class MicroBlogController {
         MessagesDao messagesDao = new MessagesDao();
         messagesDao.put_messages(messages);
 
+        int messages_id = messagesDao.get_messages_id(messages_time);
+        messages.setMessages_id(messages_id);
+
         return messages;
     }
 
-    @Test
-    public void test() {
-        /*String jsonStr = "{\"id\":\"3\",\"name\":\"bob\",\"pass\":\"123\"}";
-        System.out.println(jsonStr);
-        JSONObject jsonObj = JSONObject.fromObject(jsonStr);
-        System.out.println(jsonObj.get("name"));
-        String arrStr = "[{\"id\":\"3\",\"name\":\"bob\",\"pass\":\"123\"},{\"id\":\"4\",\"name\":\"lancy\",\"pass\":\"134\"}]";
-        System.out.println(arrStr);
-        JSONArray jsonArr = JSONArray.fromObject(arrStr);
-        System.out.println(jsonArr.getJSONObject(1).get("name"));
-        Iterator<Object> it = jsonArr.iterator();
-        while(it.hasNext()){
-            JSONObject obj = (JSONObject)it.next();
-            System.out.println("name:"+obj.get("name")+" pass:"+obj.get("pass"));
-        }*/
+    @RequestMapping(value = "put_comments.do")
+    @ResponseBody
+    public Comments put_comments(@RequestBody Map map, ModelMap modelMap, HttpServletRequest request) {
+        int comments_id;
+        String comments_info = (String) map.get("comments_info"),
+                user_id = (String) map.get("user_id");
+        int messages_id = (int) map.get("messages_id");
 
-        String json_test = "{\"username\":\"lhz\",\"user_password\":\"123\"}";
-        System.out.println(json_test);
-        String username = null, user_password = null;
+        Timestamp comments_time;
 
-        JSONObject jsonObj = JSONObject.fromObject(json_test);
-        System.out.println("jsonObj: " + jsonObj);
-        username = (String) jsonObj.get("username");
-        System.out.println(username);
-        user_password = (String) jsonObj.get("user_password");
-        System.out.println(user_password);
+        comments_time = new Timestamp(new java.util.Date().getTime());
+
+        Comments comments = new Comments();
+
+        comments.setComments_info(comments_info);
+        comments.setComments_time(comments_time);
+        comments.setMessages_id(messages_id);
+        comments.setUser_id(user_id);
+
+        CommentsDao commentsDao = new CommentsDao();
+        commentsDao.put_comments(comments);
+
+        comments_id = commentsDao.get_comments_id(messages_id, user_id);
+        comments.setComments_id(comments_id);
+
+
+        return comments;
     }
 }

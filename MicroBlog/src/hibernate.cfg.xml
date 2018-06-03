@@ -38,7 +38,8 @@
 
     <mapping resource="Users.hbm.xml" />
     <mapping resource="Userinfo.hbm.xml" />
-    <!--<mapping resource="com/lhz/Comments.hbm.xml" />-->
+    <mapping resource="Comments.hbm.xml" />
+    <mapping resource="Messages.hbm.xml" />
 
     <!--<mapping class="com.lhz.model.User"/>
     <mapping class="com.lhz.model.Voter"/>-->

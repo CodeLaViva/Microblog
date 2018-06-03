@@ -51,7 +51,7 @@ public class LoginDao {
         session.getTransaction().commit();   //事务提交
 
         if (list.size() != 0) {
-            String user_id = (String) list.get(1);
+            String user_id = (String) list.get(0);
             return user_id;
         }
 

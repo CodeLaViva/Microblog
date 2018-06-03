@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="jquery-3.1.1.js" language="JavaScript"></script>
+
+    <script type="text/javascript">
+        var jsonStr = {"username":"lhz","user_password":"123"};//object类型
+        var jsonArrayFinal = JSON.stringify(jsonStr);//string类型
+
+        jQuery.ajax({
+            type: "POST",//put delete get post
+            url: "localhost:8080/ajax.do",
+            async:true,//默认异步
+            data : {mydata:jsonArrayFinal},
+            //或{'mydata':jsonArrayFinal}
+            contentType:"application/x-www-form-urlencoded",//默认值
+            success: function(data){
+                alert(data);
+                alert("操作成功");
+            },
+            error: function(xhr,status,errMsg){
+                alert(errMsg);
+            }
+        });
+    </script>
+</head>
+<body>
+<h2>Test</h2>
+</body>
+</html>

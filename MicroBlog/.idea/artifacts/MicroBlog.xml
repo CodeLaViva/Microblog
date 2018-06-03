@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="MicroBlog">
+    <output-path>$PROJECT_DIR$/out/artifacts/MicroBlog</output-path>
+    <root id="archive" name="MicroBlog.war">
+      <element id="artifact" artifact-name="MicroBlog:war exploded" />
+      <element id="dir-copy" path="$PROJECT_DIR$/web" />
+    </root>
+  </artifact>
+</component>
