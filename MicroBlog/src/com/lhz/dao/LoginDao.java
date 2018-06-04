@@ -1,5 +1,6 @@
 package com.lhz.dao;
 
+import com.lhz.model.Users;
 import com.lhz.util.HibernateUtil;
 import org.hibernate.Session;
 
@@ -10,13 +11,13 @@ public class LoginDao {
 
     //添加对象
     public boolean login(String username, String user_password) {
-        System.out.println("username: " + username);
-        System.out.println("user_password: " + user_password);
+        System.out.println("login username: " + username);
+        System.out.println("login user_password: " + user_password);
         List<Object> list = null;
         session = HibernateUtil.openSession();
         session.beginTransaction();    //开始事务，存到tx
         try {
-            list = session.createQuery("from Users where user_phone = :username or user_id = :username or user_email = :username and user_password = :user_password")
+            list = session.createQuery("from Users where (user_phone = :username or user_id = :username or user_email = :username) and user_password = :user_password")
                     .setParameter("username", username)
                     .setParameter("user_password", user_password)
                     .list();
@@ -25,6 +26,8 @@ public class LoginDao {
                 String sql = "update Users set user_status = '1' where user_phone = :username or user_id = :username or user_email = :username";
                 session.createQuery(sql)
                         .setParameter("username", username);
+                Users users = (Users) list.get(0);
+                System.out.println(users);
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -55,7 +58,7 @@ public class LoginDao {
             return user_id;
         }
 
-        return "false";
+        return null;
     }
 
 }

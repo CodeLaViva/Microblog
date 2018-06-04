@@ -3,6 +3,7 @@ package com.lhz.controller;
 import com.lhz.dao.CommentsDao;
 import com.lhz.dao.MessagesDao;
 import com.lhz.dao.UserinfoDao;
+import com.lhz.dao.UsersDao;
 import com.lhz.model.Comments;
 import com.lhz.model.Messages;
 import com.lhz.model.Userinfo;
@@ -13,16 +14,14 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.SessionAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import java.sql.Date;
 import java.sql.Timestamp;
+import java.util.List;
 import java.util.Map;
 
 @Controller
-// Session范围 将user存入到session
-@SessionAttributes(value = "user")
 public class MicroBlogController {
     LoginService loginService = new LoginService();
 
@@ -33,11 +32,11 @@ public class MicroBlogController {
         //System.out.println("vote_password = " + vote_password);
         //System.out.println("vote_username = " + vote_username);
         if (loginService.login(username, user_password)) {
-            map.put("msg", "登录成功……");
-            map.put("user", username);
+            //map.put("msg", "登录成功……");
+            //map.put("user", username);
             return "success";
         }
-        map.put("msg", "登录失败……");
+        //map.put("msg", "登录失败……");
         return "login";
     }
 
@@ -58,25 +57,59 @@ public class MicroBlogController {
 
     @RequestMapping(value = "json.do")
     @ResponseBody
-    public String login(@RequestBody Map map, ModelMap modelMap) {
+    public Users login(@RequestBody Map map, ModelMap modelMap) {
 
         String username = (String) map.get("username"),
                 user_password = (String) map.get("user_password");
         Users users = new Users();
-        users.setUser_id(username);
-        users.setUser_password(user_password);
 
         if (loginService.login(username, user_password)) {
             modelMap.put("msg", "登录成功……");
             String user_id = loginService.get_user_id(username);
             if (!user_id.equals("false")) {
+                users = new UsersDao().get_users(user_id);
                 modelMap.put("user", user_id);
             }
-            return "true";
+            return users;
         }
 
         modelMap.put("msg", "登录失败……");
-        return "false";
+        return null;
+    }
+
+    @RequestMapping(value = "register.do")
+    @ResponseBody
+    public Users register(@RequestBody Map map) {
+        String user_id = (String) map.get("user_id"),
+                user_phone = (String) map.get("user_phone"),
+                user_email= (String) map.get("user_email"),
+                user_password = (String) map.get("user_password"),
+                user_nikename = (String) map.get("user_nikename");
+
+        Users user = new Users();
+        user.setUser_id(user_id);
+        user.setUser_phone(user_phone);
+        user.setUser_email(user_email);
+        user.setUser_password(user_password);
+        user.setUser_nikename(user_nikename);
+        user.setUser_time(new Timestamp(new java.util.Date().getTime()));
+        user.setUser_status(1);
+
+        UsersDao usersDao = new UsersDao();
+        usersDao.put_users(user);
+
+        return user;
+    }
+
+    @RequestMapping(value = "get_userinfo.do")
+    @ResponseBody
+    public Userinfo get_userinfo(@RequestBody Map map) {
+        String user_id = (String) map.get("user_id");
+
+        UserinfoDao userinfoDao = new UserinfoDao();
+        Userinfo userinfo = userinfoDao.get_userinfo(user_id);
+
+        return userinfo;
     }
 
     @RequestMapping(value = "userinfo.do")
@@ -116,9 +149,45 @@ public class MicroBlogController {
         return userinfo;
     }
 
+    @RequestMapping(value = "change_userinfo.do")
+    @ResponseBody
+    public Userinfo change_userinfo(@RequestBody Map map) {
+        String userinfo_name = (String) map.get("userinfo_name"),
+                userinfo_gender = (String) map.get("userinfo_gender"),
+                userinfo_address = (String) map.get("userinfo_address"),
+                userinfo_qq = (String) map.get("userinfo_qq"),
+                userinfo_prof = (String) map.get("userinfo_prof"),
+                userinfo_flag = (String) map.get("userinfo_flag"),
+                user_id = (String) map.get("user_id");
+
+        Date userinfo_birth = Date.valueOf((String) map.get("userinfo_birth"));
+
+        //HttpSession httpSession = request.getSession();
+        //user_id = (String) httpSession.getAttribute("username");
+
+        Userinfo userinfo = new Userinfo();
+        userinfo.setUserinfo_name(userinfo_name);
+        userinfo.setUserinfo_gender(userinfo_gender);
+        userinfo.setUserinfo_address(userinfo_address);
+        userinfo.setUserinfo_birth(userinfo_birth);
+        userinfo.setUserinfo_qq(userinfo_qq);
+        userinfo.setUserinfo_prof(userinfo_prof);
+        userinfo.setUserinfo_flag(userinfo_flag);
+        userinfo.setUser_id(user_id);
+
+        UserinfoDao userinfoDao = new UserinfoDao();
+        int userinfo_id = userinfoDao.get_userinfo_id(user_id);
+        if (userinfo_id != 0) {
+            userinfo.setUserinfo_id(userinfo_id);
+        }
+        userinfoDao.change_userinfo(userinfo);
+
+        return userinfo;
+    }
+
     @RequestMapping(value = "put_messages.do")
     @ResponseBody
-    public Messages put_messages(@RequestBody Map map, ModelMap modelMap, HttpServletRequest request) {
+    public Messages put_messages(@RequestBody Map map) {
 
         String messages_type = (String) map.get("messages_type"),
                 messages_info = (String) map.get("messages_info"),
@@ -144,9 +213,20 @@ public class MicroBlogController {
         return messages;
     }
 
+    @RequestMapping(value = "get_messages.do")
+    @ResponseBody
+    public List<Messages> get_messages(@RequestBody Map map) {
+        String user_id = (String) map.get("user_id");
+
+        MessagesDao messagesDao = new MessagesDao();
+
+        List<Messages> messages = messagesDao.get_messages(user_id);
+        return messages;
+    }
+
     @RequestMapping(value = "put_comments.do")
     @ResponseBody
-    public Comments put_comments(@RequestBody Map map, ModelMap modelMap, HttpServletRequest request) {
+    public Comments put_comments(@RequestBody Map map) {
         int comments_id;
         String comments_info = (String) map.get("comments_info"),
                 user_id = (String) map.get("user_id");
@@ -170,6 +250,17 @@ public class MicroBlogController {
         comments.setComments_id(comments_id);
 
 
+        return comments;
+    }
+
+    @RequestMapping(value = "get_comments.do")
+    @ResponseBody
+    public List<Comments> get_comments(@RequestBody Map map) {
+        String user_id = (String) map.get("user_id");
+
+        CommentsDao commentsDao = new CommentsDao();
+
+        List<Comments> comments = commentsDao.get_comments(user_id);
         return comments;
     }
 }

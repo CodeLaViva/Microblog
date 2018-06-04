@@ -28,13 +28,37 @@ public class UserinfoDao {
         //return messages;
     }
 
-    public int get_userinfo_id(String username) {
+    public Userinfo get_userinfo(String user_id) {
         List<Object> list = null;
         session = HibernateUtil.openSession();
         session.beginTransaction();    //开始事务，存到tx
         try {
-            list = session.createQuery("select userinfo_id from Userinfo where user_id = :username")
-                    .setParameter("username", username)
+            list = session.createQuery("from Userinfo where user_id = :user_id")
+                    .setParameter("user_id", user_id)
+                    .list();
+        } catch (Exception e) {
+            e.printStackTrace();
+            session.getTransaction().rollback();    // 回滚事务
+        }
+
+        session.getTransaction().commit();   //事务提交
+
+        Userinfo userinfo;
+        if (list.size() != 0) {
+            userinfo = (Userinfo) list.get(0);
+            return userinfo;
+        }
+
+        return null;
+    }
+
+    public int get_userinfo_id(String user_id) {
+        List<Object> list = null;
+        session = HibernateUtil.openSession();
+        session.beginTransaction();    //开始事务，存到tx
+        try {
+            list = session.createQuery("select userinfo_id from Userinfo where user_id = :user_id")
+                    .setParameter("user_id", user_id)
                     .list();
         } catch (Exception e) {
             e.printStackTrace();
@@ -51,4 +75,19 @@ public class UserinfoDao {
         return 0;
     }
 
+    public void change_userinfo(Userinfo userinfo) {
+
+        session = HibernateUtil.openSession();
+        session.beginTransaction();    //开始事务，存到tx
+        try {
+            session.update(userinfo);
+        } catch (Exception e) {
+            e.printStackTrace();
+            session.getTransaction().rollback();    // 回滚事务
+        }
+
+        session.getTransaction().commit();   //事务提交
+
+        //return null;
+    }
 }

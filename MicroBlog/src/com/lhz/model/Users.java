@@ -67,4 +67,17 @@ public class Users {
     public void setUser_status(int user_status) {
         this.user_status = user_status;
     }
+
+    @Override
+    public String toString() {
+        return "Users{" +
+                "user_id='" + user_id + '\'' +
+                ", user_phone='" + user_phone + '\'' +
+                ", user_email='" + user_email + '\'' +
+                ", user_password='" + user_password + '\'' +
+                ", user_nikename='" + user_nikename + '\'' +
+                ", user_time=" + user_time +
+                ", user_status=" + user_status +
+                '}';
+    }
 }
