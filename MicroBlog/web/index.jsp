@@ -11,6 +11,26 @@
     <title>$Title$</title>
     <script src="jquery-3.1.1.js" language="JavaScript"></script>
 
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",//put delete get post
+            url: "localhost:8080/userinfo.do",
+            async:true,//默认异步
+            data : {
+                'user_id':'lhz'
+            },
+            dataType:'json',
+            //contentType:"application/json",//默认值
+            success: function(data){
+                alert(JSON.stringify(data));
+
+                //alert("操作成功");
+            },
+            error: function(xhr,status,errMsg){
+                alert(errMsg);
+            }
+        });
+    </script>
   </head>
   <body>
   $END$

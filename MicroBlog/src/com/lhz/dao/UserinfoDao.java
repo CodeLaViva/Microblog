@@ -75,12 +75,12 @@ public class UserinfoDao {
         return 0;
     }
 
-    public void change_userinfo(Userinfo userinfo) {
+    public void update_userinfo(Userinfo userinfo) {
 
         session = HibernateUtil.openSession();
         session.beginTransaction();    //开始事务，存到tx
         try {
-            session.update(userinfo);
+            session.merge(userinfo);
         } catch (Exception e) {
             e.printStackTrace();
             session.getTransaction().rollback();    // 回滚事务
@@ -88,6 +88,6 @@ public class UserinfoDao {
 
         session.getTransaction().commit();   //事务提交
 
-        //return null;
     }
+
 }

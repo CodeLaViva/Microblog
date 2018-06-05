@@ -18,7 +18,7 @@ public class CommentsDao {
         session.beginTransaction();    //开始事务
 
         try {
-            session.save(comments);
+            session.merge(comments);
 
         } catch (Exception e) {
             e.printStackTrace();

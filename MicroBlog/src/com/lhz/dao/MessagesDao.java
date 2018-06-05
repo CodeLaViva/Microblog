@@ -18,7 +18,7 @@ public class MessagesDao {
         session.beginTransaction();    //开始事务
 
         try {
-            session.save(messages);
+            session.merge(messages);
 
         } catch (Exception e) {
             e.printStackTrace();

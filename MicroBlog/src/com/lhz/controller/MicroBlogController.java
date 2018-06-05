@@ -2,11 +2,9 @@ package com.lhz.controller;
 
 import com.lhz.dao.CommentsDao;
 import com.lhz.dao.MessagesDao;
-import com.lhz.dao.UserinfoDao;
 import com.lhz.dao.UsersDao;
 import com.lhz.model.Comments;
 import com.lhz.model.Messages;
-import com.lhz.model.Userinfo;
 import com.lhz.model.Users;
 import com.lhz.service.LoginService;
 import org.springframework.stereotype.Controller;
@@ -15,8 +13,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.servlet.http.HttpServletRequest;
-import java.sql.Date;
 import java.sql.Timestamp;
 import java.util.List;
 import java.util.Map;
@@ -99,90 +95,6 @@ public class MicroBlogController {
         usersDao.put_users(user);
 
         return user;
-    }
-
-    @RequestMapping(value = "get_userinfo.do")
-    @ResponseBody
-    public Userinfo get_userinfo(@RequestBody Map map) {
-        String user_id = (String) map.get("user_id");
-
-        UserinfoDao userinfoDao = new UserinfoDao();
-        Userinfo userinfo = userinfoDao.get_userinfo(user_id);
-
-        return userinfo;
-    }
-
-    @RequestMapping(value = "userinfo.do")
-    @ResponseBody
-    public Userinfo userinfo(@RequestBody Map map, ModelMap modelMap, HttpServletRequest request) {
-        String userinfo_name = (String) map.get("userinfo_name"),
-                userinfo_gender = (String) map.get("userinfo_gender"),
-                userinfo_address = (String) map.get("userinfo_address"),
-                userinfo_qq = (String) map.get("userinfo_qq"),
-                userinfo_prof = (String) map.get("userinfo_prof"),
-                userinfo_flag = (String) map.get("userinfo_flag"),
-                user_id = (String) map.get("user_id");
-
-        Date userinfo_birth = Date.valueOf((String) map.get("userinfo_birth"));
-
-        //HttpSession httpSession = request.getSession();
-        //user_id = (String) httpSession.getAttribute("username");
-
-        Userinfo userinfo = new Userinfo();
-        userinfo.setUserinfo_name(userinfo_name);
-        userinfo.setUserinfo_gender(userinfo_gender);
-        userinfo.setUserinfo_address(userinfo_address);
-        userinfo.setUserinfo_birth(userinfo_birth);
-        userinfo.setUserinfo_qq(userinfo_qq);
-        userinfo.setUserinfo_prof(userinfo_prof);
-        userinfo.setUserinfo_flag(userinfo_flag);
-        userinfo.setUser_id(user_id);
-
-        UserinfoDao userinfoDao = new UserinfoDao();
-        userinfoDao.userinfo(userinfo);
-
-        int userinfo_id = userinfoDao.get_userinfo_id(user_id);
-        if (userinfo_id != 0) {
-            userinfo.setUserinfo_id(userinfo_id);
-        }
-
-        return userinfo;
-    }
-
-    @RequestMapping(value = "change_userinfo.do")
-    @ResponseBody
-    public Userinfo change_userinfo(@RequestBody Map map) {
-        String userinfo_name = (String) map.get("userinfo_name"),
-                userinfo_gender = (String) map.get("userinfo_gender"),
-                userinfo_address = (String) map.get("userinfo_address"),
-                userinfo_qq = (String) map.get("userinfo_qq"),
-                userinfo_prof = (String) map.get("userinfo_prof"),
-                userinfo_flag = (String) map.get("userinfo_flag"),
-                user_id = (String) map.get("user_id");
-
-        Date userinfo_birth = Date.valueOf((String) map.get("userinfo_birth"));
-
-        //HttpSession httpSession = request.getSession();
-        //user_id = (String) httpSession.getAttribute("username");
-
-        Userinfo userinfo = new Userinfo();
-        userinfo.setUserinfo_name(userinfo_name);
-        userinfo.setUserinfo_gender(userinfo_gender);
-        userinfo.setUserinfo_address(userinfo_address);
-        userinfo.setUserinfo_birth(userinfo_birth);
-        userinfo.setUserinfo_qq(userinfo_qq);
-        userinfo.setUserinfo_prof(userinfo_prof);
-        userinfo.setUserinfo_flag(userinfo_flag);
-        userinfo.setUser_id(user_id);
-
-        UserinfoDao userinfoDao = new UserinfoDao();
-        int userinfo_id = userinfoDao.get_userinfo_id(user_id);
-        if (userinfo_id != 0) {
-            userinfo.setUserinfo_id(userinfo_id);
-        }
-        userinfoDao.change_userinfo(userinfo);
-
-        return userinfo;
     }
 
     @RequestMapping(value = "put_messages.do")
